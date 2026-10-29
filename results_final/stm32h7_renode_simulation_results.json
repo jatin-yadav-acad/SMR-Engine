@@ -1,0 +1,21 @@
+{
+  "model": "CMOS Energy Projection per Renode & STM32CubeMX",
+  "mcu": "STM32H743ZI (ARM Cortex-M7 @ 480 MHz)",
+  "smr": {
+    "axi_cycles": 149800000.0,
+    "fmc_transactions": 0,
+    "latency_ms": 312.1,
+    "power_mW": 364.32,
+    "energy_mJ": 113.7
+  },
+  "derpp": {
+    "latency_ms": 3840.0,
+    "power_mW": 845.0,
+    "energy_mJ": 3244.8
+  },
+  "metrics": {
+    "speedup": 12.3,
+    "energy_advantage_ratio": 28.54,
+    "zero_heap_enforced": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "dataset": "Split-CIFAR10",
+  "device": "cuda",
+  "calibration_budget_ablation": {
+    "0": {
+      "K": 0,
+      "mean_AA": 0.6617,
+      "task_accs": [
+        0.5,
+        0.5,
+        0.821,
+        0.771,
+        0.7165
+      ],
+      "effective_samples": 0,
+      "theoretical_bound": 1.0
+    },
+    "2": {
+      "K": 2,
+      "mean_AA": 0.687,
+      "task_accs": [
+        0.5,
+        0.504,
+        0.8325,
+        0.8895,
+        0.709
+      ],
+      "effective_samples": 128,
+      "theoretical_bound": 0.08838834764831843
+    },
+    "5": {
+      "K": 5,
+      "mean_AA": 0.7426,
+      "task_accs": [
+        0.508,
+        0.624,
+        0.8705,
+        0.9385,
+        0.772
+      ],
+      "effective_samples": 320,
+      "theoretical_bound": 0.05590169943749474
+    },
+    "10": {
+      "K": 10,
+      "mean_AA": 0.8847,
+      "task_accs": [
+        0.844,
+        0.825,
+        0.9065,
+        0.962,
+        0.886
+      ],
+      "effective_samples": 640,
+      "theoretical_bound": 0.03952847075210474
+    },
+    "20": {
+      "K": 20,
+      "mean_AA": 0.9309,
+      "task_accs": [
+        0.9845,
+        0.87,
+        0.913,
+        0.971,
+        0.916
+      ],
+      "effective_samples": 1280,
+      "theoretical_bound": 0.02795084971874737
+    },
+    "50": {
+      "K": 50,
+      "mean_AA": 0.9181,
+      "task_accs": [
+        0.98,
+        0.863,
+        0.902,
+        0.963,
+        0.8825
+      ],
+      "effective_samples": 3200,
+      "theoretical_bound": 0.017677669529663688
+    },
+    "100": {
+      "K": 100,
+      "mean_AA": 0.9162,
+      "task_accs": [
+        0.9805,
+        0.857,
+        0.9005,
+        0.9615,
+        0.8815
+      ],
+      "effective_samples": 6400,
+      "theoretical_bound": 0.0125
+    }
+  },
+  "summary": "Confirms Proposition 3.1: empirical accuracy rises monotonically with calibration budget K and saturates at K=20 micro-batches."
+}

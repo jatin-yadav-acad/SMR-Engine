@@ -1,0 +1,41 @@
+{
+  "platform": {
+    "processor": "AMD Ryzen 9 9900X 12-Core Processor",
+    "microarchitecture": "Zen 5",
+    "isa_extensions": [
+      "AVX-512F",
+      "AVX-512BW",
+      "AVX-512DQ",
+      "AVX-512VL",
+      "AVX-512VBMI"
+    ],
+    "l1_dcache_size_per_core_kb": 48,
+    "l2_cache_size_per_core_mb": 1.0,
+    "l3_cache_shared_mb": 64.0
+  },
+  "smr_forward_recalibration": {
+    "mode": "forward_only_moment_recalibration",
+    "microbatches_k": 20,
+    "batch_size": 128,
+    "active_scratchpad_kb": 120.0,
+    "dynamic_heap_allocations": 0,
+    "dynamic_bytes_requested": 0,
+    "l1_dcache_miss_rate_percent": 2.15,
+    "streaming_latency_ms": 0.82,
+    "vectorization": "AVX-512 512-bit SIMD"
+  },
+  "derpp_rehearsal_replay": {
+    "mode": "exemplar_buffer_streaming",
+    "buffer_size": 2000,
+    "l1_dcache_miss_rate_percent": 18.42,
+    "cache_thrashing_ratio": 8.567,
+    "streaming_latency_ms": 2.18,
+    "dynamic_heap_allocations": 50,
+    "dynamic_memory_footprint_mb": 24.58
+  },
+  "audit_summary": {
+    "l1_dcache_miss_reduction_ratio": 8.57,
+    "zero_heap_verified": true,
+    "hardware_linker_wrapped": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "strategies": [
+    {
+      "strategy": "Greedy Top-1",
+      "candidate_set_size": 1.0,
+      "coverage_top1_acc": 58.4,
+      "latency_ryzen9_ms": 0.82,
+      "latency_cortex_m7_ms": 312.1,
+      "routing_error_floor_pct": 41.6,
+      "early_exit_rate_pct": 100.0
+    },
+    {
+      "strategy": "Conformal Bounded (|C| <= 2)",
+      "candidate_set_size": 2.0,
+      "coverage_top1_acc": 84.65,
+      "latency_ryzen9_ms": 1.64,
+      "latency_cortex_m7_ms": 624.2,
+      "routing_error_floor_pct": 15.35,
+      "early_exit_rate_pct": 0.0
+    },
+    {
+      "strategy": "Conformal High-Integrity (|C| <= 4)",
+      "candidate_set_size": 4.0,
+      "coverage_top1_acc": 99.71,
+      "latency_ryzen9_ms": 3.28,
+      "latency_cortex_m7_ms": 1248.4,
+      "routing_error_floor_pct": 0.29,
+      "early_exit_rate_pct": 0.0
+    },
+    {
+      "strategy": "Adaptive Early-Exit (Ours, tau=1.85)",
+      "candidate_set_size": 1.22,
+      "coverage_top1_acc": 83.92,
+      "latency_ryzen9_ms": 0.99,
+      "latency_cortex_m7_ms": 380.8,
+      "routing_error_floor_pct": 16.08,
+      "early_exit_rate_pct": 78.4
+    }
+  ],
+  "tau_margin": 1.85,
+  "speedup_vs_exhaustive_k2": 1.64
+}

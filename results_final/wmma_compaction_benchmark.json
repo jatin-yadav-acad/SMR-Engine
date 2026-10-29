@@ -1,0 +1,58 @@
+{
+  "hardware": {
+    "device": "NVIDIA GeForce RTX 5070 Ti",
+    "architecture": "NVIDIA Blackwell sm_120",
+    "sm_clock_mhz": 2610,
+    "tdp_watts": 300.0
+  },
+  "benchmarks": {
+    "sparsity_75pct": {
+      "active_channels": 128,
+      "active_fraction": 0.25,
+      "total_gflops": 0.016777216,
+      "arithmetic_intensity_flops_per_byte": 28.44,
+      "naive_simt_branching": {
+        "latency_ms": 0.0395,
+        "tflops": 0.425,
+        "warp_execution_efficiency_pct": 25.0,
+        "branch_divergence": "Severe"
+      },
+      "smr_cooperative_compacted": {
+        "latency_ms": 0.0117,
+        "tflops": 1.434,
+        "warp_execution_efficiency_pct": 98.6,
+        "speedup_over_naive": 3.37,
+        "branch_divergence": "Zero"
+      },
+      "dense_cublas_pregathered": {
+        "latency_ms": 0.0102,
+        "tflops": 1.652,
+        "warp_execution_efficiency_pct": 100.0
+      }
+    },
+    "sparsity_50pct": {
+      "active_channels": 256,
+      "active_fraction": 0.5,
+      "total_gflops": 0.033554432,
+      "arithmetic_intensity_flops_per_byte": 36.57,
+      "naive_simt_branching": {
+        "latency_ms": 0.0421,
+        "tflops": 0.797,
+        "warp_execution_efficiency_pct": 50.0,
+        "branch_divergence": "Severe"
+      },
+      "smr_cooperative_compacted": {
+        "latency_ms": 0.0172,
+        "tflops": 1.953,
+        "warp_execution_efficiency_pct": 98.6,
+        "speedup_over_naive": 2.45,
+        "branch_divergence": "Zero"
+      },
+      "dense_cublas_pregathered": {
+        "latency_ms": 0.011,
+        "tflops": 3.039,
+        "warp_execution_efficiency_pct": 100.0
+      }
+    }
+  }
+}

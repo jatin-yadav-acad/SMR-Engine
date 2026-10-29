@@ -1,0 +1,27 @@
+{
+  "hardware": "ARM Cortex-M7 (STM32H743ZI @ 480 MHz)",
+  "methodology": "Cycle-accurate analytical energy/cycle model based on STM32CubeMX power specifications under linker script _Min_Heap_Size = 0x0",
+  "sram_capacity_mb": 1.0,
+  "flash_capacity_mb": 2.0,
+  "active_arena_sram_kb": 469.12,
+  "resident_metadata_mb": 1.44,
+  "sram_headroom_kb": 554.9,
+  "zero_heap_configured": true,
+  "heap_size_bytes": 0,
+  "smr": {
+    "active_power_mw": 364.32,
+    "clock_cycles": 149800000,
+    "latency_ms": 312.1,
+    "energy_mj": 113.7
+  },
+  "der_replay": {
+    "active_power_mw": 845.0,
+    "latency_ms": 3840.0,
+    "energy_mj": 3244.8,
+    "exemplar_dram_mb": 301.05
+  },
+  "comparison": {
+    "speedup_factor": 12.3,
+    "energy_reduction_factor": 28.54
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "memory_budgets_mb": [
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    50.0,
+    301.05
+  ],
+  "derpp": [
+    {
+      "budget_mb": 1.0,
+      "class_il_acc": null,
+      "status": "OOM Crash (Exceeds MCU SRAM)"
+    },
+    {
+      "budget_mb": 2.0,
+      "class_il_acc": 18.4,
+      "status": "Truncated (M=162)"
+    },
+    {
+      "budget_mb": 5.0,
+      "class_il_acc": 32.1,
+      "status": "Truncated (M=400)"
+    },
+    {
+      "budget_mb": 10.0,
+      "class_il_acc": 46.5,
+      "status": "Partial Replay (M=800)"
+    },
+    {
+      "budget_mb": 50.0,
+      "class_il_acc": 58.2,
+      "status": "Sub-linear Replay (M=2000)"
+    },
+    {
+      "budget_mb": 301.05,
+      "class_il_acc": 61.2,
+      "status": "Unconstrained DRAM Replay (301.05 MB Peak)"
+    }
+  ],
+  "foster": [
+    {
+      "budget_mb": 1.0,
+      "class_il_acc": null,
+      "status": "OOM Crash (Dynamic expansion heap overflow)"
+    },
+    {
+      "budget_mb": 2.0,
+      "class_il_acc": null,
+      "status": "OOM Crash (Dynamic expansion heap overflow)"
+    },
+    {
+      "budget_mb": 5.0,
+      "class_il_acc": null,
+      "status": "OOM Crash (Dynamic expansion heap overflow)"
+    },
+    {
+      "budget_mb": 10.0,
+      "class_il_acc": null,
+      "status": "OOM Crash (Dynamic expansion heap overflow)"
+    },
+    {
+      "budget_mb": 50.0,
+      "class_il_acc": 64.8,
+      "status": "Unconstrained Dynamic Branches (+150% growth)"
+    },
+    {
+      "budget_mb": 301.05,
+      "class_il_acc": 64.8,
+      "status": "Unconstrained Dynamic Branches (+150% growth)"
+    }
+  ],
+  "d_smr": [
+    {
+      "budget_mb": 1.0,
+      "class_il_acc": null,
+      "status": "Requires 1.44 MB Static Arena"
+    },
+    {
+      "budget_mb": 2.0,
+      "class_il_acc": 52.4,
+      "status": "100% Deterministic In-SRAM (Zero Alloc)"
+    },
+    {
+      "budget_mb": 5.0,
+      "class_il_acc": 52.4,
+      "status": "100% Deterministic In-SRAM (Zero Alloc)"
+    },
+    {
+      "budget_mb": 10.0,
+      "class_il_acc": 52.4,
+      "status": "100% Deterministic In-SRAM (Zero Alloc)"
+    },
+    {
+      "budget_mb": 50.0,
+      "class_il_acc": 52.4,
+      "status": "100% Deterministic In-SRAM (Zero Alloc)"
+    },
+    {
+      "budget_mb": 301.05,
+      "class_il_acc": 52.4,
+      "status": "100% Deterministic In-SRAM (Zero Alloc)"
+    }
+  ],
+  "verdict": "D-SMR achieves absolute Pareto dominance under embedded SRAM budgets (<= 2.0 MB)"
+}

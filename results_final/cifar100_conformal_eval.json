@@ -1,0 +1,39 @@
+{
+  "benchmark": "Split CIFAR-100 (10 Tasks, 100 Classes)",
+  "architecture": "ResNet-18 with D-SMR Static Envelope (+18.7%)",
+  "exemplar_buffer": 0,
+  "mean_raw_class_il_top1": 0.524,
+  "std_raw_class_il_top1": 0.0076,
+  "mean_conformal_triage_top2": 0.562,
+  "std_conformal_triage_top2": 0.0069,
+  "absolute_triage_gain": 0.038,
+  "mean_candidate_coverage_pct": 84.62,
+  "inference_latency_ms": {
+    "single_pass_fastgate_triage": 18.88,
+    "candidate_set_dispatch_batch": 19.36,
+    "latency_per_sample_ms": 0.15
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "raw_class_il_top1": 0.5332,
+      "conformal_triage_top2": 0.5705,
+      "accuracy_gain": 0.0373,
+      "candidate_coverage_pct": 84.8
+    },
+    {
+      "seed": 1337,
+      "raw_class_il_top1": 0.5241,
+      "conformal_triage_top2": 0.562,
+      "accuracy_gain": 0.0379,
+      "candidate_coverage_pct": 84.44
+    },
+    {
+      "seed": 2025,
+      "raw_class_il_top1": 0.5147,
+      "conformal_triage_top2": 0.5535,
+      "accuracy_gain": 0.0388,
+      "candidate_coverage_pct": 84.62
+    }
+  ]
+}

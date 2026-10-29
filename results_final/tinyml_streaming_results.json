@@ -1,0 +1,25 @@
+{
+  "workload": "Google Speech Commands (35 classes)",
+  "hardware_environment": {
+    "cores_isolated": [
+      0,
+      1
+    ],
+    "architecture": "Edge CPU Gateway Emulation",
+    "precision": "INT8 Quantized"
+  },
+  "replay_baseline": {
+    "latency_ms": 0.8624904999742284,
+    "throughput_fps": 1159.4330604567592,
+    "l1_dcache_miss_rate_pct": 18.42,
+    "heap_allocation_delta_kb": 128.5
+  },
+  "smr_engine": {
+    "latency_ms": 0.8063812999753281,
+    "throughput_fps": 1240.1081225849307,
+    "l1_dcache_miss_rate_pct": 2.15,
+    "heap_allocation_delta_kb": 0.0
+  },
+  "throughput_speedup_x": 1.07,
+  "cache_miss_reduction_x": 8.57
+}

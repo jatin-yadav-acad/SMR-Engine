@@ -1,0 +1,53 @@
+{
+  "adapter_hot_swap": {
+    "dynamic_swap_latency_ms": 1.10070499998983,
+    "smr_swap_latency_ms": 0.008046000148169696,
+    "swap_speedup_x": 136.8015137608739,
+    "runtime_vram_delta_kb": 0.0
+  },
+  "multitenant_serving": {
+    "single_stream_decode_tok_s": 61.3,
+    "dynamic_serving_throughput_tok_s": 1215.4,
+    "smr_serving_throughput_tok_s": 1420.8,
+    "serving_speedup_x": 1.1689978607865723
+  },
+  "isolated_adapter_gemm": {
+    "dynamic_gemm_tok_s": 1001178.1443196577,
+    "smr_gemm_tok_s": 2583731.572317803
+  },
+  "qwen_systems_matrix": {
+    "Qwen2.5-3B": {
+      "parameters": 3085938688,
+      "peak_vram_gb": 12.34,
+      "single_stream_decode_tok_s": 84.2,
+      "serving_throughput_tok_s": 1820.5,
+      "sequential_lora_AA": 46.17,
+      "sequential_lora_FM": 27.25,
+      "smr_lora_AA": 47.5,
+      "smr_lora_FM": 0.0,
+      "runtime_heap_delta_kb": 0.0
+    },
+    "Qwen2.5-7B": {
+      "parameters": 7615616512,
+      "peak_vram_gb": 15.12,
+      "single_stream_decode_tok_s": 61.3,
+      "serving_throughput_tok_s": 1420.8,
+      "sequential_lora_AA": 48.9,
+      "sequential_lora_FM": 14.2,
+      "smr_lora_AA": 50.15,
+      "smr_lora_FM": 0.0,
+      "runtime_heap_delta_kb": 0.0
+    },
+    "Qwen2.5-14B": {
+      "parameters": 14770000000,
+      "peak_vram_gb": 17.51,
+      "single_stream_decode_tok_s": 42.1,
+      "serving_throughput_tok_s": 985.4,
+      "sequential_lora_AA": 46.33,
+      "sequential_lora_FM": 0.25,
+      "smr_lora_AA": 48.1,
+      "smr_lora_FM": 0.0,
+      "runtime_heap_delta_kb": 0.0
+    }
+  }
+}
