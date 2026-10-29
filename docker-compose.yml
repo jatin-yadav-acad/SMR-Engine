@@ -1,0 +1,18 @@
+services:
+  smr-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ipc: host
+    network_mode: host
+    volumes:
+      - .:/workspace/SMR-Engine
+    command: bash run_all_benchmarks.sh

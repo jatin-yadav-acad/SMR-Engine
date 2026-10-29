@@ -1,0 +1,25 @@
+# ==============================================================================
+# Renode Emulation Script: STM32H743ZI Cortex-M7 Bus & Cycle Profiler
+# SMR-Engine: In-SRAM Execution vs. External FMC SDRAM Bus Transaction Monitor
+# ==============================================================================
+
+using sysbus
+mach create "stm32h743-smr"
+machine LoadPlatformDescription @platforms/cpus/stm32h743.repl
+
+showAnalyzer sysbus.usart1
+sysbus.cpu PerformanceConfig true
+
+# Trace external FMC SDRAM (0xC0000000 / 0xD0000000) vs internal AXI-SRAM (0x24000000)
+# AXI-SRAM is single-cycle zero-wait-state; FMC SDRAM incurs 14-18 cycle bus stall penalties.
+sysbus AddWatchpointHook 0xD0000000 0x02000000 Read "print '[FMC Read Stall] ' + str(sysbus.cpu.ExecutedInstructions)"
+sysbus AddWatchpointHook 0x24000000 0x00080000 Read "print '[AXI-SRAM Access] ' + str(sysbus.cpu.ExecutedInstructions)"
+
+macro reset
+"""
+    sysbus LoadELF @firmware/smr_cortex_m7.elf
+"""
+runMacro $reset
+
+echo "Starting Instruction-Accurate Benchmark in Renode..."
+start
